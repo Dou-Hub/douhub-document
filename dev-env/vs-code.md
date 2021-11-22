@@ -1,0 +1,1 @@
+Install vscode-icons extensions
