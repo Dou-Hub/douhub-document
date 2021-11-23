@@ -8,3 +8,4 @@
 
 4. [Typescript Heandbook](https://www.typescriptlang.org/docs/handbook/intro.html)
 
+5. [NPM Package & Publish](https://itnext.io/step-by-step-building-and-publishing-an-npm-typescript-package-44fe7164964c)
