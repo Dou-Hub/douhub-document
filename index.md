@@ -27,17 +27,12 @@ Such as Secret Manager, S3, DynamoDB, CosmosDB, SNS, SQS ...
 2. [douhub-helper-search](https://github.com/Dou-Hub/douhub-helper-search)
 The handy functions to work with Elastic Search
 
-3. [douhub-helper-photo](https://github.com/Dou-Hub/douhub-helper-photo)
-The functions that are used for handle and process photo on AWS
+3. [douhub-helper-message](https://github.com/Dou-Hub/douhub-helper-message)
+The functions that are used to send SMS, In-app Notification & Emails
 
-4. [douhub-helper-video](https://github.com/Dou-Hub/douhub-helper-video)
-The functions that are used for handle and process video on AWS
+4. [douhub-helper-message](https://github.com/Dou-Hub/douhub-helper-realtime)
+The functions that are used to handle realtime pub/sub websocket message
 
-5. [douhub-helper-warmup](https://github.com/Dou-Hub/douhub-helper-warmup)
-The auto cross region crawler for web app warm up 
-
-5. [douhub-helper-message](https://github.com/Dou-Hub/douhub-helper-message)
-The functions that are used to send SMS, In-app Notification, Realtime Message & Emails
 
 ### UI repos
 
@@ -50,7 +45,7 @@ The React JS UI components for web app
 3. [douhub-ui-mobile](https://github.com/Dou-Hub/douhub-ui-mobile)
 The React Native UI components for mobile app 
 
-### Other Lamnda APIs
+### Lamnda REST APIs
 
 1. [douhub-api-video-create](https://github.com/Dou-Hub/douhub-api-video-create)
 triggered when a video is created in S3 and will send it to AWS video transcoding service to make it ready for streaming
@@ -64,11 +59,14 @@ triggered when a video is created in S3 and will send it to AWS video transcodin
 4. [douhub-api-photo-delete](https://github.com/Dou-Hub/douhub-api-photo-delete)
 triggered when a video is deleted in S3 and will delete all related streaming video segment files
 
+5. [douhub-api-warmup](https://github.com/Dou-Hub/douhub-api-warmup)
+The auto cross region crawler for web app warm up 
+
 
 ## Platform Repos (Private)
 
-1. [douhub-platform-auth](https://github.com/Dou-Hub/douhub-platform-auth)
-The functions that are used for authentication and authorization
+1. [douhub-platform-context](https://github.com/Dou-Hub/douhub-platform-context)
+The functions that are used for authentication, authorization and context related features
 
 2. [douhub-platform-data](https://github.com/Dou-Hub/douhub-platform-data)
 The functions that are used for business data management
