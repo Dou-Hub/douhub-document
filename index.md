@@ -39,6 +39,9 @@ The functions that are used to process business record with system metadata
 6. [douhub-helper-relationship](https://github.com/Dou-Hub/douhub-helper-relationship)
 The functions that are used to manage relationship by using GraphDB
 
+7. [douhub-helper-organization](https://github.com/Dou-Hub/douhub-helper-organization)
+The functions to manage organization/client, users, roles ... 
+
 ### UI repos
 
 1. [douhub-ui-store](https://github.com/Dou-Hub/douhub-ui-store)

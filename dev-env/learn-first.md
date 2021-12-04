@@ -9,3 +9,11 @@
 4. [Typescript Heandbook](https://www.typescriptlang.org/docs/handbook/intro.html)
 
 5. [NPM Package & Publish](https://itnext.io/step-by-step-building-and-publishing-an-npm-typescript-package-44fe7164964c)
+
+6. [Serverless.com]https://www.serverless.com/
+
+7. [React JS]https://reactjs.org/
+
+8. [Next JS]https://reactjs.org/
+
+9. 
