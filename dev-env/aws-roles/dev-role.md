@@ -1,9 +1,9 @@
-# perkhero-dev Role
+# appname-dev Role
 
 The role should be given to the IAM user that will be used to deploy web app and lambda APIs
 The AWS credential type of the user should ideally only be "Access Key - Programatic Access".
 
-## perkhero-dev Policy
+## appname-dev Policy
 
 ```json
 {
@@ -67,7 +67,7 @@ The AWS credential type of the user should ideally only be "Access Key - Program
         "secretsmanager:DescribeSecret",
         "secretsmanager:ListSecretVersionIds"
       ],
-      "Resource": ["arn:aws:secretsmanager:*:*:secret:perkhero-*"]
+      "Resource": ["arn:aws:secretsmanager:*:*:secret:appname-*"]
     },
     {
       "Effect": "Allow",
@@ -96,7 +96,7 @@ The AWS credential type of the user should ideally only be "Access Key - Program
         "s3:ListBucketVersions",
         "s3:GetObjectVersion"
       ],
-      "Resource": ["arn:aws:s3:::perkhero-*"]
+      "Resource": ["arn:aws:s3:::appname-*"]
     },
     {
       "Effect": "Allow",
@@ -115,7 +115,7 @@ The AWS credential type of the user should ideally only be "Access Key - Program
         "cloudformation:UpdateStack",
         "cloudformation:UpdateTerminationProtection"
       ],
-      "Resource": "arn:aws:cloudformation:*:*:stack/perkhero-*/*"
+      "Resource": "arn:aws:cloudformation:*:*:stack/appname-*/*"
     },
     {
       "Effect": "Allow",

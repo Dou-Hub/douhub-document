@@ -1,4 +1,4 @@
-# nexxt-oreo-prod-web Role
+# appname-prod-web Role
 
 This role will be used to run Serverless Next.JS Web Lambda Edge
 It will be configured in the serverless.yml
@@ -7,13 +7,13 @@ It will be configured in the serverless.yml
 inputs:
   runtime:
     defaultLambda: "nodejs14.x"
-  bucketName: nexxt-oreo-us-prod-web
+  bucketName: appname-us-prod-web
   name:
-    defaultLambda: nexxt-oreo-us-prod-web
-  roleArn: "arn:aws:iam::624175887269:role/nexxt-oreo-dev"
+    defaultLambda: appname-us-prod-web
+  roleArn: "arn:aws:iam::your-aws-account:role/appname-dev"
 ```
 
-## nexxt-oreo-prod-web Policy
+## appname-prod-web Policy
 
 ```json
 {
