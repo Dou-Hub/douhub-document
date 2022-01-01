@@ -1,0 +1,9 @@
+1. appname-us-prod-data
+2. appname-us-prod-action
+3. appname-us-prod-web-page
+4. appname-us-prod-auth
+5. appname-us-prod-chat.fifo
+6. appname-us-prod-email
+7. appname-us-prod-sms
+8. appname-us-prod-s3-photo-create
+9. appname-us-prod-s3-photo-delete

@@ -1,9 +1,6 @@
-# appname-dev Role
+# {appname}-lambda-basic Role & Policy
 
-The role should be given to the IAM user that will be used to deploy web app and lambda APIs
-The AWS credential type of the user should ideally only be "Access Key - Programatic Access".
-
-## appname-dev Policy
+## lambda-basic Policy
 
 ```json
 {
@@ -19,7 +16,7 @@ The AWS credential type of the user should ideally only be "Access Key - Program
         "logs:*",
         "events:*",
         "kinesis:*",
-        "qldb:*",
+        "qldb:*"
       ],
       "Resource": "*"
     },
@@ -115,7 +112,9 @@ The AWS credential type of the user should ideally only be "Access Key - Program
         "cloudformation:UpdateStack",
         "cloudformation:UpdateTerminationProtection"
       ],
-      "Resource": "arn:aws:cloudformation:*:*:stack/appname-*/*"
+      "Resource": [
+        "arn:aws:cloudformation:*:*:stack/appname-*/*"
+      ]
     },
     {
       "Effect": "Allow",
@@ -144,7 +143,6 @@ The AWS credential type of the user should ideally only be "Access Key - Program
       "Resource": ["arn:aws:lambda:*:*:function:*"]
     },
     {
-      "Sid": "ListAndDescribe",
       "Effect": "Allow",
       "Action": [
         "dynamodb:BatchGet*",
@@ -159,6 +157,38 @@ The AWS credential type of the user should ideally only be "Access Key - Program
         "dynamodb:PutItem"
       ],
       "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:DescribeStream",
+        "dynamodb:DescribeTable",
+        "dynamodb:Get*",
+        "dynamodb:Query",
+        "dynamodb:Scan",
+        "dynamodb:BatchWrite*",
+        "dynamodb:Delete*",
+        "dynamodb:Update*",
+        "dynamodb:PutItem"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+```
+
+## Trust Relationships of the Role
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": ["edgelambda.amazonaws.com", "lambda.amazonaws.com"]
+      },
+      "Action": "sts:AssumeRole"
     }
   ]
 }

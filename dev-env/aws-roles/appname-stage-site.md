@@ -1,4 +1,6 @@
-# appname-prod-web Role
+# {appname}-{stage}-site Role
+
+e.g. douhub-prod-site
 
 This role will be used to run Serverless Next.JS Web Lambda Edge
 It will be configured in the serverless.yml
@@ -7,13 +9,13 @@ It will be configured in the serverless.yml
 inputs:
   runtime:
     defaultLambda: "nodejs14.x"
-  bucketName: appname-us-prod-web
+  bucketName: appname-us-dev-web
   name:
     defaultLambda: appname-us-prod-web
-  roleArn: "arn:aws:iam::your-aws-account:role/appname-dev"
+  roleArn: "arn:aws:iam::your-aws-account:role/appname-stage-site"
 ```
 
-## appname-prod-web Policy
+## {appname}-{stage}-site Policy
 
 ```json
 {
