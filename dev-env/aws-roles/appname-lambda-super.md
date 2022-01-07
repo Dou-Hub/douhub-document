@@ -16,7 +16,8 @@
         "logs:*",
         "events:*",
         "kinesis:*",
-        "qldb:*"
+        "qldb:*",
+        "cognito:*"
       ],
       "Resource": "*"
     },
@@ -146,21 +147,6 @@
       "Effect": "Allow",
       "Action": [
         "dynamodb:BatchGet*",
-        "dynamodb:DescribeStream",
-        "dynamodb:DescribeTable",
-        "dynamodb:Get*",
-        "dynamodb:Query",
-        "dynamodb:Scan",
-        "dynamodb:BatchWrite*",
-        "dynamodb:Delete*",
-        "dynamodb:Update*",
-        "dynamodb:PutItem"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
         "dynamodb:DescribeStream",
         "dynamodb:DescribeTable",
         "dynamodb:Get*",

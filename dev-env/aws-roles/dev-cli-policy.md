@@ -17,7 +17,9 @@ The AWS credential type of the user should ideally only be "Access Key - Program
         "logs:*",
         "events:*",
         "kinesis:*",
-        "qldb:*"
+        "qldb:*",
+        "cloudwatch:*",
+        "sns:*"
       ],
       "Resource": "*"
     },
@@ -82,17 +84,7 @@ The AWS credential type of the user should ideally only be "Access Key - Program
     {
       "Effect": "Allow",
       "Action": [
-        "s3:GetAccelerateConfiguration",
-        "s3:GetObject",
-        "s3:ListBucket",
-        "s3:PutAccelerateConfiguration",
-        "s3:PutBucketPolicy",
-        "s3:PutObject",
-        "s3:GetBucketLocation",
-        "s3:DeleteObject",
-        "s3:DeleteObjectVersion",
-        "s3:ListBucketVersions",
-        "s3:GetObjectVersion"
+        "s3:*"
       ],
       "Resource": ["arn:aws:s3:::appname-*"]
     },
@@ -145,34 +137,10 @@ The AWS credential type of the user should ideally only be "Access Key - Program
     },
     {
       "Effect": "Allow",
-      "Action": [
-        "dynamodb:BatchGet*",
-        "dynamodb:DescribeStream",
-        "dynamodb:DescribeTable",
-        "dynamodb:Get*",
-        "dynamodb:Query",
-        "dynamodb:Scan",
-        "dynamodb:BatchWrite*",
-        "dynamodb:Delete*",
-        "dynamodb:Update*",
-        "dynamodb:PutItem"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "dynamodb:DescribeStream",
-        "dynamodb:DescribeTable",
-        "dynamodb:Get*",
-        "dynamodb:Query",
-        "dynamodb:Scan",
-        "dynamodb:BatchWrite*",
-        "dynamodb:Delete*",
-        "dynamodb:Update*",
-        "dynamodb:PutItem"
-      ],
-      "Resource": "*"
+      "Action": "dynamodb:*",
+      "Resource": [
+        "arn:aws:dynamodb:*:*:table/appname-*"
+        ]
     }
   ]
 }
