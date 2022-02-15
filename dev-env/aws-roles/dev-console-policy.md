@@ -26,6 +26,11 @@ The dev-cli policy should be given to this consoel user as well
       "Effect": "Allow",
       "Action": ["dynamodb:ListTables", "dynamodb:DescribeTable"],
       "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": ["SNS:ListSubscriptions", "SNS:ListTopics"],
+      "Resource": "*"
     }
   ]
 }

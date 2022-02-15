@@ -4,52 +4,70 @@
 
 ```json
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "logs:*",
-        "events:*",
-        "kinesis:*",
-        "qldb:*",
-        "cloudwatch:*",
-        "sns:*"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "cloudfront:*"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "secretsmanager:GetResourcePolicy",
-        "secretsmanager:GetSecretValue",
-        "secretsmanager:DescribeSecret",
-        "secretsmanager:ListSecretVersionIds"
-      ],
-      "Resource": ["arn:aws:secretsmanager:*:*:secret:appname-*"]
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "s3:*"
-      ],
-      "Resource": ["arn:aws:s3:::appname-*"]
-    },
-    {
-      "Effect": "Allow",
-      "Action": "dynamodb:*",
-      "Resource": [
-        "arn:aws:dynamodb:*:*:table/appname-*"
-        ]
-    }
-  ]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:*",
+                "events:*",
+                "kinesis:*",
+                "qldb:*",
+                "cloudwatch:*",
+                "sns:*",
+                "sqs:*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "cloudfront:*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "secretsmanager:GetResourcePolicy",
+                "secretsmanager:GetSecretValue",
+                "secretsmanager:DescribeSecret",
+                "secretsmanager:ListSecretVersionIds"
+            ],
+            "Resource": [
+                "arn:aws:secretsmanager:*:*:secret:douhub-*",
+                "arn:aws:secretsmanager:*:*:secret:bandup-*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:*"
+            ],
+            "Resource": [
+                "arn:aws:s3:::douhub-*",
+                "arn:aws:s3:::bandup-*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "sqs:*"
+            ],
+            "Resource": [
+                "arn:aws:sqs:*:*:douhub-*",
+                "arn:aws:sqs:*:*:bandup-*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": "dynamodb:*",
+            "Resource": [
+                "arn:aws:dynamodb:*:*:table/douhub-*",
+                "arn:aws:dynamodb:*:*:table/bandup-*"
+            ]
+        }
+    ]
 }
 ```
 
