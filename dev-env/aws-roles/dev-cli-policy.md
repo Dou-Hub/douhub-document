@@ -20,6 +20,7 @@ The AWS credential type of the user should ideally only be "Access Key - Program
                 "qldb:*",
                 "cloudwatch:*",
                 "sqs:*",
+                "ses:*",
                 "lambda:*",
                 "s3:*"
             ],
